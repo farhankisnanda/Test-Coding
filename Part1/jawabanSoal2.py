@@ -1,34 +1,28 @@
 """
 Dikerjakan dengan menggunakan Python
-Program mendeteksi angka
+Program mendeteksi kata akhiran 'ha'
+
 Algoritma:
-1. Minta inputan user berupa angka dengan nilai maksimal yaitu 10000
-2. Cek apakah angka berupa ganjil atau genap
-3. Tampilkan hasil berupa true apabila genap dan false apabila ganjil
-Inputan: 
-1. Angka
+1. Minta kalimat dari user
+2. Cek apakah kalimat mengandung akhiran 'ha'
+3. Tampil true apabila ditemukan, false jika tidak
+
+Inputan:
+1. Kalimat
 """
 
 try:
-  angka = int(input("Masukkan angka dengan nilai maksimal 10000! \n>> "))
-  hasil = True
-
-  if angka <= 10000:
-    if angka % 2 == 0:
-      hasil = True
-    elif angka % 2 != 0:
-      hasil = False
-    print("")
-    print("HASIL PROGRAM")
-    print(hasil)
-  else:
-    print("")
-    print("Angka mau melebihi 10000!")
-
+  kalimat = input("Masukkan sebuah karakter/kata/kalimat! \n>> ")
+  kalimat = kalimat.lower()
   
-except ValueError:
+  if kalimat[-2:] == "ha":
+    hasil = True
+  else:
+    hasil = False
+  
   print("")
-  print("Yang kamu masukkan bukan angka bilangan bulat!")
+  print("HASIL PROGRAM")
+  print(hasil)
+
 except:
-  print("")
-  print("Kamu memasukkan inputan yang salah")
+  print("Kamu memasukkan inputan yang salah!")
